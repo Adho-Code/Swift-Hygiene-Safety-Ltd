@@ -1330,7 +1330,7 @@ input.checkbox:checked:after {
 /*-- services--*/
 
 .serv-grid1 {
-    background: url(../image/service.jpg) no-repeat center;
+    background: url(../images/service.jpg) no-repeat center;
     background-size: cover;
     min-height: 435px;
     padding: 160px 25px 0;
