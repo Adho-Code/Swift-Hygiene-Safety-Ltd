@@ -1,0 +1,53 @@
+/*-- services--*/
+
+.services-main {
+    margin-top: 50px;
+}
+
+
+.serv-grid1 {
+    background: url(../image/service.jpg) no-repeat center;
+    background-size: cover;
+    padding: 160px 25px 0;
+    text-align: center;
+}
+
+h4.sub1 {
+    font-size: 33px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.serv-sub1 {
+    text-align: center;
+}
+
+.serv-sub1 img {
+    width: 60%;
+}
+
+.serv-sub1 h5 {
+    color: #031f9a;
+    margin: 21px 0 10px;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.serv-sub1 {
+    width: 30%;
+    -webkit-box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+    -moz-box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+    box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+    padding: 20px;
+}
+
+
+.serv-bottom {
+    padding-bottom: 2em;
+}
+
+
+/*-- //services--*/
