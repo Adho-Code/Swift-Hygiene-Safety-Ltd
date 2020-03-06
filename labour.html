@@ -145,8 +145,8 @@
               <img src="images/plumber.jpeg" alt="" />
               <h5>Plumber</h5>
 
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">
+                The process of competitively selecting contractors to perform work is based on a system of rewards and penalties, all distributed randomly.</p>
             </div>
 
 
@@ -154,8 +154,8 @@
                 <img src="images/workforce.jpeg" alt="" />
                 <h5> Work Force</h5>
   
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
+                <p class="card-text">If you hire people just because they can do a job, they'll work for your money. But if you hire people who believe what you believe, they'll work for you with blood and sweat and tears.
+                 .</p>
               </div>
 
 
@@ -163,8 +163,9 @@
                 <img src="images/electrician.jpeg" alt="" />
                 <h5>Electricians</h5>
   
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
+                <p class="card-text">We are more casual about qualifying the people we allow to act as advocates in the courtroom than we are about licensing electricians.
+
+                  .</p>
               </div>
 
 
@@ -172,8 +173,7 @@
                 <img src="images/woodenfloor.jpeg" alt="" />
                 <h5>Wooden Floor Service</h5>
   
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
+                <p class="card-text">It's only out of reach when you choose to keep your feet flat on the floor clean and smart.</p>
               </div>
 
 
@@ -181,8 +181,7 @@
                 <img src="images/landscape.jpeg" alt="" />
                 <h5>Landscaping and Gardening</h5>
   
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
+                <p class="card-text">This is the real secret of life – to be completely engaged with what you are doing in the here and now. And instead of calling it work, realize it is play.</p>
               </div>
 
 
@@ -190,8 +189,9 @@
                 <img src="images/laundry.jpeg" alt="" />
                 <h5>Laundry</h5>
   
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
+                <p class="card-text">I believe you should live each day as if it is your last, which is why I don't have any dirty laundry.This Swift Hygiene will sort all your enquiries.
+
+                </p>
               </div>
 
               <div class="col-md-4 serv-sub1">
@@ -234,7 +234,7 @@
   </section>
 
 
-  <form method="POST" action="http://localhost:3000/request-service">
+  <form method="POST" action="http://localhost:3000/request-service" onsubmit="return sendMail(this)">
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationServer013">First name</label>
@@ -291,23 +291,23 @@
         <div class="form-group"><label for="id_category">Type Of Labour</label><select name="labour" class="form-control" title="" id="id_category">
             <option value="" selected>---------</option>
             
-            <option value="1">Plumber</option>
+            <option value="plumber">Plumber</option>
             
-            <option value="2">workforce</option>
+            <option value="workforce">workforce</option>
             
-            <option value="3">Electricians</option>
+            <option value="electrician">Electricians</option>
             
-            <option value="4">woodenfloor Service</option>
+            <option value="woodenfloor">woodenfloor Service</option>
             
-            <option value="5">Landscaping and Gardening</option>
+            <option value="landscape and Gardening">Landscaping and Gardening</option>
             
-            <option value="6">Laundry</option>
+            <option value="laundry">Laundry</option>
             
-            <option value="7">Commissary</option>
+            <option value="commissary">Commissary</option>
 
-            <option value="7">Fumigation & Pest Control</option>
+            <option value="fumigation & pest control">Fumigation & Pest Control</option>
 
-            <option value="7">Catering</option>
+            <option value="catering">Catering</option>
             
             </select>
             </div>
@@ -317,15 +317,15 @@
             <div class="form-group"><label for="id_location_id">Location id</label><select name="location_id" class="form-control" title="" id="id_location_id">
                 <option value="" selected>---------</option>
                 
-                <option value="1">Nairobi</option>
+                <option value="Nairobi">Nairobi</option>
                 
-                <option value="2">Nakuru</option>
+                <option value="Nakuru">Nakuru</option>
                 
-                <option value="4">Kisumu</option>
+                <option value="Kisumu">Kisumu</option>
                 
-                <option value="5">Nyahururu</option>
+                <option value="Nyahururu">Nyahururu</option>
                 
-                <option value="3">Marsabit</option>
+                <option value="Marsabit">Marsabit</option>
                 
                 </select>
         </div>
@@ -336,6 +336,15 @@
       </div>
 
      
+
+      <div class="col-md-4 mb-3">
+        <label for="validationServer043">Date</label>
+        <input type="text" name="date" class="form-control" id="validationServer043" placeholder="Date"
+          required>
+        <div class="invalid-feedback">
+          Please provide a valid state.
+        </div>
+      </div>
 
       <div class="col-md-4 mb-3">
         <label for="validationServer043">Duration</label>
@@ -360,7 +369,7 @@
     </div>
     <div class="form-group">
       <div class="custom-control custom-checkbox">
-        <input type="checkbox" name="checkbox" class="custom-control-input is-invalid" id="invalidCheck33" required>
+        <input type="checkbox" class="custom-control-input is-invalid" id="invalidCheck33" required>
         <label class="custom-control-label" for="invalidCheck33">Agree to terms and conditions</label>
         <div class="invalid-feedback">
           You must agree before submitting.
@@ -463,6 +472,31 @@
 
   
   <script src="js/main.js"></script>
+
+  <script>
+      function sendMail(f) {
+          f  = $(f);
+          let data = f.serializeArray();
+          let payload = {};
+          for(let field in data) {
+              payload[data[field].name] = data[field].value;
+          }
+          fetch('http://localhost:3000/request-service', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+          }).then(response=>{
+              if(response.ok) {
+                  alert('successfuly send mail');
+              } else {
+                  alert('failed to send mail');
+              }
+          });
+          return false;
+      }
+  </script>
     
   </body>
 </html>
