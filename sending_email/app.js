@@ -19,7 +19,7 @@ app.post('/request-service', (req, res) => {
       ${req.body.contact},
       ${req.body.location_id}`
     // let text = `${req.body.firstname} ${req.body.lastname} ${req.body.username} ${req.body.email} ${req.body.labour} ${req.body.duration} ${req.body.contact} ${req.body.location_id} requested a service`;
-    sendMail('adhoadhigal@gmail.com','Service Request', text);
+    sendMail(' info@swifthygiene.co.ke','Service Request', text);
     res.send('success full');
 } )
 
