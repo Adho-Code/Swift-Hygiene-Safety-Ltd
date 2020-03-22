@@ -9,8 +9,6 @@ var transporter = nodemailer.createTransport({
 });
 
 
-
-
 module.exports = function sendMail(email, subject, text) {
     var mailOptions = {
         from: 'adhoadhigal@gmail.com',
