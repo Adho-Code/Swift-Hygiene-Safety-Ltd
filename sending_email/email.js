@@ -9,6 +9,7 @@ var transporter = nodemailer.createTransport({
 });
 
 
+
 module.exports = function sendMail(email, subject, text) {
     var mailOptions = {
         from: 'adhoadhigal@gmail.com',
@@ -16,6 +17,8 @@ module.exports = function sendMail(email, subject, text) {
         subject: subject,
         text: text
     }
+
+
 
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
@@ -26,3 +29,4 @@ module.exports = function sendMail(email, subject, text) {
       });
 
 }
+
