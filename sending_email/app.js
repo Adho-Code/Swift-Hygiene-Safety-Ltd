@@ -6,12 +6,9 @@ const app = express();
 
 
 
-
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
 
 
 app.get('/', (req, res) => res.send('hello world') )
@@ -29,7 +26,8 @@ app.post('/request-service', (req, res) => {
     res.send('success full');
 } )
 
+
+
+
 app.listen(3000, ()=> console.log('sending email on port 3000')  )
-
-
 
